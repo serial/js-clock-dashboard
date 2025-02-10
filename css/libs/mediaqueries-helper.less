@@ -1,0 +1,43 @@
+@sm-min: 768px;
+@md-min: 1025px;
+@lg-min: 1280px;
+
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+
+.portrait(@rules) {
+  @media only screen
+  and (orientation : portrait) {
+    @rules();
+  }
+}
+.landscape(@rules) {
+  @media only screen
+  and (orientation : landscape) {
+    @rules();
+  }
+}
+
+
+.min(@width, @rules) {
+  @media only screen
+  and ( min-width: @width ) {
+    @rules();
+  }
+}
+
+.max(@width, @rules) {
+  @media only screen
+  and ( max-width: @width ) {
+    @rules();
+  }
+}
+
+.minmax(@min, @max, @rules) {
+  @media only screen and ( min-width: @min ) and ( max-width: @max ) {
+    @rules();
+  }
+}
+
+

@@ -1,0 +1,30 @@
+@import (reference) "libs/mediaqueries-helper";
+
+@sm-min: 768px;
+@md-min: 1025px;
+@lg-min: 1280px;
+
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+@media only screen and (max-width: @sm-min) {
+  .app {
+    .date-times {
+      flex-direction: column-reverse;
+
+      .world-times {
+        border-right: none;
+        width: 100%;
+        border-top: 1px solid @s_blue_dark;
+      }
+
+      .date {
+        .container {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

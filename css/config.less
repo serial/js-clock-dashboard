@@ -1,0 +1,46 @@
+@s_blue_light: rgb(37, 169, 223);
+@s_blue_dark: rgb(28, 117, 187);
+@s_red_light: rgb(237, 64, 54);
+@s_red_dark: rgb(206, 40, 35);
+@s_gray_light: rgb(87, 88, 91);
+@s_gray_dark: rgb(60, 62, 66);
+@mh_red: rgb(230, 57, 17);
+@mg_gray_dark: rgb(26, 26, 24);
+
+@w: rgb(255, 255, 255);
+@b: rgb(0, 0, 0);
+
+@gb: rgb(99, 179, 237);
+@g0: rgb(74, 85, 104);
+
+.f1(@s:1rem,@w:400,@h:150%,@l:0) {
+  font-family: "Inter", "Open Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: @s;
+  font-weight: @w;
+  line-height: @h;
+}
+
+.f2(@s:1rem,@w:400,@h:150%,@l:0) {
+  font-family: "Share Tech", system-ui, "Open Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: @s;
+  font-weight: @w;
+  line-height: @h;
+}
+
+.font-inter {
+  .f1;
+}
+
+.font-share-tech {
+  .f2;
+}
+
+.transition(@args: all 0.2s ease-in-out) {
+  -webkit-transition: @args;
+  transition: @args;
+}
+
+.text-accent {
+  color: @s_blue_dark;
+}
+
